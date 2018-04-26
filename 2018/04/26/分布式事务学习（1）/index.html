@@ -5,19 +5,19 @@
   
 
   
-  <title>分布式消息队列RocketMQ--事务消息--解决分布式事务 | XUYI&#39;s BLOG</title>
+  <title>分布式消息队列RocketMQ解决分布式事务 | XUYI&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
 <meta name="keywords" content="分布式,事务,RocketMQ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布式消息队列RocketMQ--事务消息--解决分布式事务">
+<meta property="og:title" content="分布式消息队列RocketMQ解决分布式事务">
 <meta property="og:url" content="https://tonyxuyi.github.io/2018/04/26/分布式事务学习（1）/index.html">
 <meta property="og:site_name" content="XUYI&#39;s BLOG">
 <meta property="og:description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-26T16:05:27.652Z">
+<meta property="og:updated_time" content="2018-04-26T16:09:07.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分布式消息队列RocketMQ--事务消息--解决分布式事务">
+<meta name="twitter:title" content="分布式消息队列RocketMQ解决分布式事务">
 <meta name="twitter:description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
   
     <link rel="alternate" href="/atom.xml" title="XUYI&#39;s BLOG" type="application/atom+xml">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      分布式消息队列RocketMQ--事务消息--解决分布式事务
+      分布式消息队列RocketMQ解决分布式事务
     </h1>
   
 
@@ -203,7 +203,7 @@
       <ul>
         
           <li>
-            <a href="/2018/04/26/分布式事务学习（1）/">分布式消息队列RocketMQ--事务消息--解决分布式事务</a>
+            <a href="/2018/04/26/分布式事务学习（1）/">分布式消息队列RocketMQ解决分布式事务</a>
           </li>
         
           <li>
