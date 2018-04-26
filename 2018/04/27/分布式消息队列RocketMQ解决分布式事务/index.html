@@ -8,13 +8,14 @@
   <title>分布式消息队列RocketMQ解决分布式事务 | XUYI&#39;s BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
+<meta name="keywords" content="分布式,事务,RocketMQ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分布式消息队列RocketMQ解决分布式事务">
 <meta property="og:url" content="https://tonyxuyi.github.io/2018/04/27/分布式消息队列RocketMQ解决分布式事务/index.html">
 <meta property="og:site_name" content="XUYI&#39;s BLOG">
 <meta property="og:description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-26T16:12:17.329Z">
+<meta property="og:updated_time" content="2018-04-26T16:13:35.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分布式消息队列RocketMQ解决分布式事务">
 <meta name="twitter:description" content="说到分布式事务，就会谈到那个经典的”账号转账”问题：2个账号，分布处于2个不同的DB，或者说2个不同的子系统里面，A要扣钱，B要加钱，如何保证原子性？ 一般的思路都是通过消息中间件来实现“最终一致性”：A系统扣钱，然后发条消息给中间件，B系统接收此消息，进行加钱。 但这里面有个问题：A是先update DB，后发送消息呢？ 还是先发送消息，后update DB？ 假设先update DB成功，发送">
@@ -71,9 +72,13 @@
         <section id="main"><article id="post-分布式消息队列RocketMQ解决分布式事务" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/04/27/分布式消息队列RocketMQ解决分布式事务/" class="article-date">
-  <time datetime="2018-04-26T16:11:44.000Z" itemprop="datePublished">2018-04-27</time>
+  <time datetime="2018-04-26T16:11:00.000Z" itemprop="datePublished">2018-04-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/转贴/">转贴</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -129,6 +134,8 @@
       <a data-url="https://tonyxuyi.github.io/2018/04/27/分布式消息队列RocketMQ解决分布式事务/" data-id="cjggq8c1a0000k8mju0np8szy" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RocketMQ/">RocketMQ</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事务/">事务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布式/">分布式</a></li></ul>
+
     </footer>
   </div>
   
@@ -154,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/转贴/">转贴</a></li></ul>
     </div>
   </div>
 
@@ -164,7 +171,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RocketMQ/">RocketMQ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事务/">事务</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布式/">分布式</a></li></ul>
     </div>
   </div>
 
@@ -174,7 +181,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      
+      <a href="/tags/RocketMQ/" style="font-size: 10px;">RocketMQ</a> <a href="/tags/事务/" style="font-size: 10px;">事务</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a>
     </div>
   </div>
 
